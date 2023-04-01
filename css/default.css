@@ -1,0 +1,177 @@
+body {
+	background-image: url("../imgs/background.jpg");
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-attachment: fixed;
+	background-size: cover;
+	margin:0;
+}/*背景图片*/
+
+p {
+	color: #ffffff;
+}
+
+del {
+	color: #888888;
+}
+
+a {
+	color: #66ccff;
+}
+
+
+h1 {
+	color: #ffffff;
+	margin: 0;
+}
+h2 {
+	color: #ffffff;
+	margin: 0;
+}
+h3 {
+	color: #ffffff;
+	margin: 0;
+}
+h4 {
+	color: #ffffff;
+	margin: 0;
+
+}/*关闭标题的margin*/
+
+.navbar {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	display: block;
+	padding: 0;
+	margin: 0;
+	height: 56px;
+	background-color: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(16px);
+	box-shadow: 0 0 32px rgba(0, 0, 0, 0.2);
+	z-index: 2;
+}/*导航栏div*/
+
+.navlogo {
+	position: absolute;
+	left: 25px;
+	top: 8px;
+	vertical-align: middle;
+	width: auto;
+	height: 40px;
+}
+.navlogo-txt{
+
+
+	position: absolute;
+	left: 65px;
+	top: 16px;
+	vertical-align: middle;
+
+	width: auto;
+	height: 20px;
+}/*这是logo的两个svg*/
+
+.navlist {
+	display: inline;
+}
+.navlist > li {
+	display: inline;
+}/*导航栏按钮的ul li样式*/
+
+.navitem {
+	position: relative;
+	margin: 6px 8px 0 8px;
+	padding: 10px 8px 10px 8px;
+	left: 80px;
+	float: left;
+	display: block;
+	text-decoration: none;
+	color: #ffffff;
+	background-color: rgba(0, 0, 0, 0);
+	background-clip: border-box;
+	border-radius: 4px;
+}/*导航列表li内含的anchor(item)*/
+.navitem:hover {
+	background-color: rgba(90, 90, 90, 0.1);
+}/*item悬停时的按钮外形*/
+
+.dropdown-content {
+	display: flex;
+	position: absolute;
+	top: 45px;
+	left: calc(75px + var(--N)*80px);
+	background-color: rgba(0, 0, 0, 1);
+	backdrop-filter: blur(16px);
+	box-shadow: 0 0 0px rgba(0, 0, 0, 0.2) ;
+	border-radius: 8px;
+	z-index: 2;
+	height: 0px;
+	overflow: hidden;
+	flex-direction: column-reverse;
+	-webkit-transition: all 0.3s cubic-bezier(1,0,1,0);
+}/*item的下拉菜单，隐藏*/
+.navlist > li:hover .dropdown-content {
+	position: absolute;
+	top: 45px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.2) ;
+	height: 200px;
+	-webkit-transition: all 0.3s cubic-bezier(0,1,0,1);
+}/*列表的li悬停时显示下拉菜单*//*
+.dropdown-content:hover .dropdown-content {
+	position: absolute;
+	top: 45px;
+	-webkit-transition: all 0.3s cubic-bezier(0,1,0,1);
+	height: 500px;
+}/*悬停于菜单时保持显示*/
+.dropdown-content > a {
+	display: block;
+	position: relative;
+	margin: 4px 4px 4px 4px;
+	height: 36px;
+	padding-bottom: 0;
+	padding-top: 0;
+	padding-left: 14px;
+	padding-right: 14px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	background-clip: border-box;
+	border-radius: 4px;
+	vertical-align: middle;
+}/*下拉菜单内容a的样式*/
+.dropdown-content > a:hover {
+	vertical-align: middle;
+	background-color: rgba(90, 90, 90, 0.1);
+}/*下拉菜单内容悬停时的按钮外形*/
+
+.page-content {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 16px 56px 128px 56px;
+}/*页面内容边界*/
+
+.card {
+	width: var(--W);
+	height: var(--H);
+	padding: 40px 60px 40px 60px;
+	margin: 20px 20px 20px 20px;
+	background-color: rgba(0, 0, 0, 0.8);
+	background-size: cover;
+	background-position: center;
+	backdrop-filter: blur(16px);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.2) ;
+	border-radius: 8px;
+}/*卡片样式，从html"style"传递参数，--W 宽度，--H 高度*/
+.float-left{
+	display: block;
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+.float-right{
+	display: block;
+	float: right;
+	width: 50%;
+}
